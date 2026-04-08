@@ -146,9 +146,6 @@ G1_Busca_EDA2-2026.1/
 
 ## Apresentação
 
-<div align="center">
 <!-- Adicione aqui o link para vídeo de demonstração quando disponível -->
-<p><em>Vídeo de demonstração em breve</em></p>
-</div>
+[Vídeo de demonstração](https://drive.google.com/drive/folders/1iFZ5N3bZ-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
 
-<font size="3"><p style="text-align: center">Autor: [Yan Guimarães](https://github.com/yanzin00).</p></font>
