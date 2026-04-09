@@ -60,6 +60,10 @@ Ambiente aberto com densidade configurável de obstáculos aleatórios, útil pa
 | Dijkstra | Informada | Caminho mais curto | Moderado |
 | A* | Heurística | Caminho mais curto (com heurística admissível) | Moderado |
 
+## Screenshot
+
+<img width="1752" height="1308" alt="image" src="https://github.com/user-attachments/assets/1414d2c5-2ac1-4c13-88dc-2ef89df867fc" />
+
 ## Requisitos
 
 - **Python 3.10+**
