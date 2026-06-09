@@ -12,11 +12,16 @@ from algorithms import ALGOS
 
 
 class MazeApp:
-    def __init__(self, root: tk.Tk) -> None:
-        self.root = root
-        self.root.title("maze pathfinder")
-        self.root.resizable(False, False)
-        self.root.configure(bg="#f8fafc")
+    def __init__(self, parent: tk.Tk | tk.Frame) -> None:
+        if isinstance(parent, tk.Tk):
+            self.root = parent
+            self.frame = self.root
+            self.root.title("maze pathfinder")
+            self.root.resizable(False, False)
+            self.root.configure(bg="#f8fafc")
+        else:
+            self.frame = parent
+            self.root = parent.winfo_toplevel()
 
         self.grid: list[list[int]] = []
         self.linhas = 21
@@ -80,7 +85,7 @@ class MazeApp:
         self._botao(linha2, "limpar caminho", self.limpar_caminho, "#f59e0b")
 
         # canvas
-        frame_canvas = tk.Frame(self.root, bg="#e2e8f0", padx=1, pady=1)
+        frame_canvas = tk.Frame(self.frame, bg="#e2e8f0", padx=1, pady=1)
         frame_canvas.pack(padx=12, pady=(6, 8))
 
         self.canvas = tk.Canvas(frame_canvas, highlightthickness=0, bg=COLORS[WALL])
@@ -88,7 +93,7 @@ class MazeApp:
         self.canvas.bind("<Button-1>", self.ao_clicar)
 
         # barra inferior
-        base = tk.Frame(self.root, bg="#f1f5f9", pady=6, padx=12)
+        base = tk.Frame(self.frame, bg="#f1f5f9", pady=6, padx=12)
         base.pack(fill=tk.X)
 
         self.var_info = tk.StringVar(value="")
