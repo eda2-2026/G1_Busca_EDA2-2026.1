@@ -127,4 +127,4 @@ G1_Busca_EDA2-2026.1/
 ## Apresentação
 
 <!-- Adicione aqui o link para vídeo de demonstração quando disponível -->
-[Vídeo de demonstração](https://drive.google.com/drive/folders/1iFZ5N3bZ-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
+[Vídeo de demonstração](https://drive.google.com/drive/u/0/folders/1sWzIeEjTEgLZKAgWBCp-W0x7M2pN8Bqt)
