@@ -34,8 +34,8 @@ Esta funcionalidade ajuda a desmistificar a complexidade estrutural das rotaçõ
 
 ## Screenshot
 
-<!-- Adicione o link ou path local para a screenshot do RootQuest aqui -->
-<img width="1752" height="1308" alt="Screenshot do RootQuest" src="[LINK_DA_SUA_SCREENSHOT_AQUI]" />
+<img width="849" height="686" alt="PHOTO-2026-06-08-23-58-54" src="https://github.com/user-attachments/assets/5e49d34d-c388-4748-ae51-43d8db33c71c" />
+
 
 ## Requisitos
 
