@@ -6,7 +6,6 @@
 
 ## Alunos
 
-
 <div align = "center">
 <table>
   <tr>
@@ -23,46 +22,20 @@
 
 ## Sobre
 
-Este projeto é uma aplicação gráfica interativa que demonstra algoritmos de busca em labirintos gerados proceduralmente. Através de uma interface Tk2, o usuário pode:
+Este projeto é a continuação do desenvolvimento das aplicações interativas [MazePathfinder](https://github.com/eda2-2026/G1_Busca_EDA2-2026.1), introduzindo agora o **RootQuest (Tree Visualizer)**. O objetivo desta funcionalidade é fornecer uma ferramenta visual rica e interativa para auxiliar no estudo e compreensão de árvores de busca autobalanceadas.
 
-- **Gerar Labirintos**: Criar labirintos usando diferentes algoritmos (DFS recursivo, Prim's, Kruskal's).
-- **Definir Pontos de Passagem**: Clicar em células do labirinto para adicionar pontos que o caminho deve visitar.
-- **Visualizar Algoritmos de Busca**: Executar algoritmos clássicos de busca em grafos para encontrar caminhos entre pontos:
-  - **BFS (Busca em Largura)**: Encontra o caminho mais curto em grafos não ponderados
-  - **DFS (Busca em Profundidade)**: Explora o máximo possível antes de retroceder
-  - **Dijkstra**: Algoritmo de busca de caminho mais curto com pesos uniformes
-  - **A***: Busca heurística que combina custo e estimativa para eficiência
-- **Animação em Tempo Real**: Visualizar a exploração das células e a construção do caminho passo a passo com animação fluida.
-- **Estatísticas**: Ver métricas como comprimento do caminho e número de células exploradas.
+Através de uma interface gráfica baseada em Tkinter, o usuário pode:
+- **Selecionar Estruturas**: Escolher entre manipular uma **Árvore AVL** ou uma **Red-Black Tree**.
+- **Inserção Interativa**: Adicionar novos valores numéricos (nós) à árvore em tempo real.
+- **Visualização do Balanceamento**: Acompanhar visualmente como a estrutura da árvore se modifica e se adapta para manter as propriedades de balanceamento estrito (no caso da AVL) ou balanceamento de cor (no caso da Red-Black Tree) após cada inserção.
+- **Renderização Dinâmica**: A árvore é redesenhada automaticamente calculando posições x e y de forma recursiva para evitar sobreposição visual, demonstrando a hierarquia exata e as rotações (Left-Leaning, etc) sob o capô.
 
-O projeto facilita o entendimento visual de como diferentes algoritmos de busca exploram espaços e encontram caminhos, permitindo comparar seu comportamento em tempo real.
-
-## Algoritmos de Geração de Labirintos
-
-### DFS Recursivo (Recursive Backtracker)
-Gera labirintos perfeitos usando busca em profundidade com backtracking, criando corredores longos e sinuosos.
-
-### Prim's
-Algoritmo baseado em árvore geradora mínima, produz labirintos com ramificações mais distribuídas.
-
-### Kruskal's
-Outro algoritmo de árvore geradora mínima usando Union-Find, cria labirintos com estrutura aleatória balanceada.
-
-### Aberto com Obstáculos
-Ambiente aberto com densidade configurável de obstáculos aleatórios, útil para testar algoritmos em cenários menos estruturados.
-
-## Algoritmos de Busca Implementados
-
-| Algoritmo | Tipo | Garantia | Uso de Memória |
-|-----------|------|----------|----------------|
-| BFS | Cega | Caminho mais curto | Moderado |
-| DFS | Cega | Não garante optimalidade | Baixo |
-| Dijkstra | Informada | Caminho mais curto | Moderado |
-| A* | Heurística | Caminho mais curto (com heurística admissível) | Moderado |
+Esta funcionalidade ajuda a desmistificar a complexidade estrutural das rotações duplas/simples e recolorações que frequentemente confundem os alunos ao estudarem estruturas avançadas.
 
 ## Screenshot
 
-<img width="1752" height="1308" alt="image" src="https://github.com/user-attachments/assets/1414d2c5-2ac1-4c13-88dc-2ef89df867fc" />
+<!-- Adicione o link ou path local para a screenshot do RootQuest aqui -->
+<img width="1752" height="1308" alt="Screenshot do RootQuest" src="[LINK_DA_SUA_SCREENSHOT_AQUI]" />
 
 ## Requisitos
 
@@ -106,7 +79,6 @@ Ambiente aberto com densidade configurável de obstáculos aleatórios, útil pa
    ```
    Uma janela de demonstração do Tkinter deve abrir.
 
-
 ## Configurando o Projeto
 
 ### 1. Clone ou Baixe o Projeto
@@ -127,13 +99,14 @@ python main.py
 
 ## Como Usar
 
-1. **Escolha o Tamanho**: Selecione o tamanho do labirinto no dropdown (11×11 até 41×41).
-2. **Escolha o Tipo**: Selecione o algoritmo de geração do labirinto.
-3. **Gerar Labirinto**: Clique em "novo labirinto" para gerar.
-4. **Adicionar Pontos**: Clique nas células abertas (brancas) para adicionar pontos de passagem numerados.
-5. **Escolha o Algoritmo**: Selecione BFS, DFS, Dijkstra ou A*.
-6. **Encontrar Caminho**: Clique em "encontrar caminho" para visualizar o algoritmo em ação.
-7. **Limpar**: Use "limpar pontos" ou "limpar caminho" para resetar elementos específicos.
+Ao iniciar a aplicação, você verá o menu principal **ESCOLHA SEU DESAFIO**.
+
+1. Clique no botão verde **RootQuest (Tree Visualizer)**.
+2. **Escolha a Estrutura**: No menu superior da nova tela, use o menu suspenso para escolher o tipo de árvore que deseja estudar (**AVL** ou **Red-Black**).
+3. **Insira um Valor**: Digite um número inteiro na caixa de entrada rotulada como **Valor**.
+4. **Acione a Inserção**: Pressione a tecla **Enter** ou clique no botão **Inserir**. A árvore será desenhada ou atualizada na tela central, demonstrando a nova estrutura balanceada.
+5. **Continue Inserindo**: Repita o processo de inserção para ver a árvore crescer e realizar as rotações necessárias.
+6. **Limpar a Tela**: Clique no botão vermelho **Limpar** a qualquer momento para resetar a tela e recomeçar a árvore do zero.
 
 ## Estrutura do Projeto
 
@@ -143,11 +116,11 @@ G1_Busca_EDA2-2026.1/
 └── src/
     ├── main.py         # Arquivo de inicialização principal
     ├── home.py         # Interface do menu principal de seleção
-    ├── app.py          # Interface e lógica de UI do Maze Pathfinder
+    ├── app.py          # Interface legada (Maze Pathfinder)
     ├── tree_app.py     # Interface e lógica de UI do RootQuest Visualizer
-    ├── maze.py         # Algoritmos de geração de labirintos
-    ├── algorithms.py   # Algoritmos de busca (BFS, DFS, Dijkstra, A*)
-    ├── trees.py        # Modelagem de dados das árvores AVL e Red-Black
+    ├── maze.py         # Lógica legada
+    ├── algorithms.py   # Lógica legada
+    ├── trees.py        # Algoritmos principais e modelagem de dados das árvores AVL e Red-Black
     └── constants.py    # Constantes e configurações globais
 ```
 
@@ -155,11 +128,3 @@ G1_Busca_EDA2-2026.1/
 
 <!-- Adicione aqui o link para vídeo de demonstração quando disponível -->
 [Vídeo de demonstração](https://drive.google.com/drive/folders/1iFZ5N3bZ-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
- constants.py    # Constantes e configurações globais
-```
-
-## Apresentação
-
-<!-- Adicione aqui o link para vídeo de demonstração quando disponível -->
-[Vídeo de demonstração](https://drive.google.com/drive/folders/1iFZ5N3bZ-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
