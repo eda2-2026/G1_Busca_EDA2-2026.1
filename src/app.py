@@ -18,7 +18,7 @@ class MazeApp:
             self.frame = self.root
             self.root.title("maze pathfinder")
             self.root.resizable(False, False)
-            self.root.configure(bg="#f8fafc")
+            self.root.configure(bg="#1e293b")
         else:
             self.frame = parent
             self.root = parent.winfo_toplevel()
@@ -40,11 +40,11 @@ class MazeApp:
     # ── construcao da interface ────────────────────────────────────────────────
 
     def _construir_ui(self) -> None:
-        topo = tk.Frame(self.frame, bg="#f8fafc", pady=8, padx=12)
+        topo = tk.Frame(self.frame, bg="#1e293b", pady=8, padx=12)
         topo.pack(side=tk.TOP, fill=tk.X)
 
         # linha 1
-        linha1 = tk.Frame(topo, bg="#f8fafc")
+        linha1 = tk.Frame(topo, bg="#1e293b")
         linha1.pack(fill=tk.X, pady=(0, 4))
 
         self._rotulo(linha1, "tamanho:")
@@ -68,7 +68,7 @@ class MazeApp:
         self._botao(linha1, "novo labirinto", self.novo_labirinto, "#3b82f6")
 
         # linha 2
-        linha2 = tk.Frame(topo, bg="#f8fafc")
+        linha2 = tk.Frame(topo, bg="#1e293b")
         linha2.pack(fill=tk.X)
 
         self._rotulo(linha2, "algoritmo:")
@@ -85,7 +85,7 @@ class MazeApp:
         self._botao(linha2, "limpar caminho", self.limpar_caminho, "#f59e0b")
 
         # canvas
-        frame_canvas = tk.Frame(self.frame, bg="#e2e8f0", padx=1, pady=1)
+        frame_canvas = tk.Frame(self.frame, bg="#1e293b", padx=1, pady=1)
         frame_canvas.pack(padx=12, pady=(6, 8))
 
         self.canvas = tk.Canvas(frame_canvas, highlightthickness=0, bg=COLORS[WALL])
@@ -93,19 +93,19 @@ class MazeApp:
         self.canvas.bind("<Button-1>", self.ao_clicar)
 
         # barra inferior
-        base = tk.Frame(self.frame, bg="#f1f5f9", pady=6, padx=12)
+        base = tk.Frame(self.frame, bg="#0f172a", pady=6, padx=12)
         base.pack(fill=tk.X)
 
         self.var_info = tk.StringVar(value="")
         self.var_estat = tk.StringVar(value="")
 
-        tk.Label(base, textvariable=self.var_info, bg="#f1f5f9",
-                 fg="#334155", font=("Courier", 11), anchor="w").pack(side=tk.LEFT)
-        tk.Label(base, textvariable=self.var_estat, bg="#f1f5f9",
-                 fg="#64748b", font=("Courier", 10), anchor="e").pack(side=tk.RIGHT)
+        tk.Label(base, textvariable=self.var_info, bg="#0f172a",
+                 fg="#cbd5e1", font=("Courier", 11), anchor="w").pack(side=tk.LEFT)
+        tk.Label(base, textvariable=self.var_estat, bg="#0f172a",
+                 fg="#94a3b8", font=("Courier", 10), anchor="e").pack(side=tk.RIGHT)
 
     def _rotulo(self, parent, texto: str) -> None:
-        tk.Label(parent, text=texto, bg="#f8fafc", fg="#475569",
+        tk.Label(parent, text=texto, bg="#1e293b", fg="#cbd5e1",
                  font=("Courier", 11)).pack(side=tk.LEFT, padx=(0, 4))
 
     def _botao(self, parent, texto: str, comando, cor: str) -> tk.Button:

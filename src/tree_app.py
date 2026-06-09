@@ -13,7 +13,7 @@ class TreeApp:
         self._construir_ui()
 
     def _construir_ui(self):
-        topo = tk.Frame(self.frame, bg="#f8fafc", pady=8, padx=12)
+        topo = tk.Frame(self.frame, bg="#1e293b", pady=8, padx=12)
         topo.pack(side=tk.TOP, fill=tk.X)
 
         tk.Label(topo, text="Tipo de Arvore:", bg="#1e293b", fg="#cbd5e1", font=("Courier", 11)).pack(side=tk.LEFT, padx=(0, 4))
