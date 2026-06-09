@@ -1,4 +1,4 @@
-# Maze Pathfinder - Algoritmos de Busca
+# RootQuest - Algoritmos de Arvores
 
 **Número da Lista**: 1
 **Conteúdo da Disciplina**: FGA0239 - ESTRUTURA DE DADOS 2 - T01
@@ -141,10 +141,13 @@ python main.py
 G1_Busca_EDA2-2026.1/
 ├── README.md
 └── src/
-    ├── main.py         # Ponto de entrada da aplicação
-    ├── app.py          # Classe principal da interface Tk2
+    ├── main.py         # Arquivo de inicialização principal
+    ├── home.py         # Interface do menu principal de seleção
+    ├── app.py          # Interface e lógica de UI do Maze Pathfinder
+    ├── tree_app.py     # Interface e lógica de UI do RootQuest Visualizer
     ├── maze.py         # Algoritmos de geração de labirintos
     ├── algorithms.py   # Algoritmos de busca (BFS, DFS, Dijkstra, A*)
+    ├── trees.py        # Modelagem de dados das árvores AVL e Red-Black
     └── constants.py    # Constantes e configurações globais
 ```
 
@@ -152,4 +155,11 @@ G1_Busca_EDA2-2026.1/
 
 <!-- Adicione aqui o link para vídeo de demonstração quando disponível -->
 [Vídeo de demonstração](https://drive.google.com/drive/folders/1iFZ5N3bZ-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
+ constants.py    # Constantes e configurações globais
+```
 
+## Apresentação
+
+<!-- Adicione aqui o link para vídeo de demonstração quando disponível -->
+[Vídeo de demonstração](https://drive.google.com/drive/folders/1iFZ5N3bZ-zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
+zTFKSO7wrfIlDC-y0j5MnkC?usp=sharing)
