@@ -20,7 +20,7 @@ class BaseTree:
             color = getattr(node, 'color', '#3b82f6') # Blue for AVL, RB uses its color
             if isinstance(self, AVLTree): color = '#3b82f6' # Force blue for AVL since Node defaults to RED
             elif color == "RED": color = "#ef4444"
-            elif color == "BLACK": color = "#1e293b"
+            if color == "BLACK": color = "#000000"
             positions[node.value] = {'x': x, 'y': y, 'color': color, 'node': node}
 
         traverse(self.root, width / 2, y_start, width / 4)

@@ -16,14 +16,14 @@ class TreeApp:
         topo = tk.Frame(self.frame, bg="#f8fafc", pady=8, padx=12)
         topo.pack(side=tk.TOP, fill=tk.X)
 
-        tk.Label(topo, text="Tipo de Arvore:", bg="#f8fafc", fg="#475569", font=("Courier", 11)).pack(side=tk.LEFT, padx=(0, 4))
+        tk.Label(topo, text="Tipo de Arvore:", bg="#1e293b", fg="#cbd5e1", font=("Courier", 11)).pack(side=tk.LEFT, padx=(0, 4))
         self.var_tipo = tk.StringVar(value="AVL")
         tipo_cb = ttk.Combobox(topo, textvariable=self.var_tipo, values=["AVL", "Red-Black"], width=10, state="readonly", font=("Courier", 11))
         tipo_cb.pack(side=tk.LEFT, padx=(0, 10))
         tipo_cb.bind("<<ComboboxSelected>>", self._mudar_arvore)
 
-        tk.Label(topo, text="Valor:", bg="#f8fafc", fg="#475569", font=("Courier", 11)).pack(side=tk.LEFT, padx=(0, 4))
-        self.entry_valor = tk.Entry(topo, width=8, font=("Courier", 11))
+        tk.Label(topo, text="Valor:", bg="#1e293b", fg="#cbd5e1", font=("Courier", 11)).pack(side=tk.LEFT, padx=(0, 4))
+        self.entry_valor = tk.Entry(topo, width=8, font=("Courier", 11), bg="#334155", fg="white", insertbackground="white")
         self.entry_valor.pack(side=tk.LEFT, padx=(0, 10))
         self.entry_valor.bind("<Return>", lambda e: self._inserir())
 

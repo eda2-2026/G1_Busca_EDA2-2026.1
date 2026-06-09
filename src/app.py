@@ -40,7 +40,7 @@ class MazeApp:
     # ── construcao da interface ────────────────────────────────────────────────
 
     def _construir_ui(self) -> None:
-        topo = tk.Frame(self.root, bg="#f8fafc", pady=8, padx=12)
+        topo = tk.Frame(self.frame, bg="#f8fafc", pady=8, padx=12)
         topo.pack(side=tk.TOP, fill=tk.X)
 
         # linha 1
